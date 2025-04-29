@@ -1,5 +1,5 @@
 /*
- * Author: Saaya Wan & Ethan Price
+ * Author: Saaya Wan
  * Created: April 24, 2025
  * Description: Variables for my Benz AMG G-Class vehicle.
  */

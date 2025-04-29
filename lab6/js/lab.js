@@ -1,21 +1,25 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+/*
+ * Author: Saaya Wan
+ * Created: 2025-04-28
+ * Lab 6: JavaScript Arrays & Objects
+*/
 
-// Constants
+// Declare transport methods
+let myTransport = ["bike", "bus", "walking", "car", "scooter"];
 
-// Functions
+// Declare primary ride object
+let myMainRide = {
+  make: "Mercedes-Benz",
+  model: "AMG G-Class",
+  color: "Matte Black",
+  year: 2021,
+  ownIt: true,
+  age: function() {
+    return new Date().getFullYear() - this.year;
+  }
+};
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
-
-// let's get this party started
-main();
+// Output to document
+document.writeln("Getting around: " + myTransport + "<br>");
+document.writeln("My Main Ride: <pre>", 
+  JSON.stringify(myMainRide, null, '\t'), "</pre>");
