@@ -45,22 +45,33 @@
 //window.onload = processUserName;
 
 
-/*
- * Author: Saaya Wan
- * Created: 2025-05-04
- * Lab 7: Functions
- */
+// Author: Saaya Wan
+// Created: 2025-05-04
+// Lab 7: Functions - Bonus Questions
 
-// Function to ask for user name and return sorted version
-function sortUserName() {
+// 1. Ask for the user's name and remove spaces
+function getCleanName() {
   let userName = window.prompt("Hi! What's your name?");
-  let sortedName = userName.split('').sort().join('');
-  return "I've fixed your name: " + sortedName;
+  return userName.replace(/\s+/g, ''); // removes all spaces
 }
 
-// Run when document is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-  let result = sortUserName();
+// 2. Shuffle the name to create an anagram
+function shuffleName(name) {
+  let array = name.split('');
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array.join('');
+}
+
+// 3. Output the final result inside a styled <div>
+function displayAnagram() {
+  let cleanName = getCleanName();
+  let anagram = shuffleName(cleanName);
   let outputEl = document.getElementById("output");
-  outputEl.innerHTML = `<p class="name-output">${result}</p>`;
-});
+  outputEl.innerHTML = `<div class="name-output">Here's your anagram: ${anagram}</div>`;
+}
+
+// Call the function once the page loads
+window.onload = displayAnagram;
