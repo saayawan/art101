@@ -24,3 +24,13 @@ let squared = numbers.map(function(x) {
     return x * x;
 });
 console.log("Squared numbers: (" + squared.length + ") [" + squared.join(", ") + "]");
+
+// Bonus: Display results using jQuery in the HTML #output div
+$(document).ready(function() {
+    let resultHTML = `
+        <h3>Original numbers: (${numbers.length}) [${numbers.join(", ")}]</h3>
+        <h3>Doubled numbers: (${doubled.length}) [${doubled.join(", ")}]</h3>
+        <h3>Squared numbers: (${squared.length}) [${squared.join(", ")}]</h3>
+    `;
+    $('#output').html(resultHTML); // Display the results in the #output div
+});
