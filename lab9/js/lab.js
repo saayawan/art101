@@ -5,7 +5,6 @@
 
    Author: Saaya Wan
    Date: 12th May 2025
-*/
 
 // Add buttons to each section
 $("#challenge").append("<button id='button-challenge'>Make Special</button>");
@@ -27,3 +26,24 @@ $("#button-reflection").click(function() {
 
 // Add dynamic content to the #output div
 $("#output").append("<p>This output was added using jQuery!</p>");
+
+*/
+
+/*
+   lab.js - Bonus Version with DRY jQuery code
+   Author: Saaya Wan
+   Date: 2025
+*/
+
+$(document).ready(function () {
+  // Append a button to each section with the class "special-section"
+  $(".special-section").each(function () {
+    $(this).append("<button class='make-special'>Make Special</button>");
+  });
+
+  // Add a click event to all buttons
+  $(".make-special").click(function () {
+    $(this).parent().toggleClass("special");
+  });
+});
+
