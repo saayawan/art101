@@ -1,21 +1,29 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+/*
+   lab.js - Lab 9: Libraries & jQuery
 
-// Constants
+   Requirements: jQuery must be loaded for this script to work.
 
-// Functions
+   Author: Saaya Wan
+   Date: 12th May 2025
+*/
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
+// Add buttons to each section
+$("#challenge").append("<button id='button-challenge'>Make Special</button>");
+$("#problems").append("<button id='button-problems'>Make Special</button>");
+$("#reflection").append("<button id='button-reflection'>Make Special</button>");
 
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
+// Add click listeners to toggle the 'special' class
+$("#button-challenge").click(function() {
+  $("#challenge").toggleClass("special");
+});
 
-// let's get this party started
-main();
+$("#button-problems").click(function() {
+  $("#problems").toggleClass("special");
+});
+
+$("#button-reflection").click(function() {
+  $("#reflection").toggleClass("special");
+});
+
+// Add dynamic content to the #output div
+$("#output").append("<p>This output was added using jQuery!</p>");
