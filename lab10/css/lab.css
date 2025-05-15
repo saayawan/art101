@@ -7,3 +7,16 @@
   border: solid 1px #888;
   background-color: #DDD8C4;
 }
+
+
+.text p {
+  display: inline-block;
+  max-width: 60%;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: rgb(23, 28, 124);
+  color: rgb(160, 255, 242);
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
