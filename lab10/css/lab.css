@@ -1,6 +1,5 @@
-/* Here we can set styles for this lab page that we don't want to effect others pages */
+/* Lab-specific styling */
 
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
@@ -8,15 +7,14 @@
   background-color: #DDD8C4;
 }
 
+/* Chat bubble layout */
+.text {
+  display: flex;
+  margin: 5px 0;
+}
 
 .text p {
-  display: inline-block;
   max-width: 60%;
-  margin: 3px;
-  padding: 5px 10px;
+  padding: 8px 12px;
   border-radius: 15px;
-  background-color: rgb(23, 28, 124);
-  color: rgb(160, 255, 242);
-  font-family: sans-serif;
-  font-size: 0.8em;
-}
+  font-siz

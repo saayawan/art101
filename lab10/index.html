@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- This title is used for tabs and bookmarks -->
   <title>Lab 10 - JavaScript for the Web</title>
-
-  <!-- Use UTF character set, a good idea with any webpage -->
   <meta charset="UTF-8" />
-  <!-- Set viewport so page remains consistently scaled w/ narrow devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Include a sitewide CSS file for consistent styling across the site -->
+  <!-- Sitewide and Lab-specific CSS -->
   <link rel="stylesheet" type="text/css" href="../css/site.css">
-  <!-- Lab-specific CSS file for special styling of this page -->
   <link rel="stylesheet" type="text/css" href="css/lab.css">
 
-  <!-- Load jQuery library to make JavaScript easier (must be above our script) -->
+  <!-- jQuery and JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- Link to JavaScript file - DEFER waits until all elements are rendered -->
   <script type="text/javascript" src="js/lab.js" defer></script>
 </head>
 
 <body>
-  <!-- Main content area -->
   <main id="content">
     <section>
       <h1>Lab 10 - JavaScript for the Web</h1>
 
       <div class="minor-section">
         <h2>Challenge</h2>
-        <p>I experimented with DOM manipulation using jQuery.</p>
+        <p>In this lab, I practiced using jQuery to manipulate the DOM and dynamically update a webpage based on user actions.</p>
       </div>
 
       <div class="minor-section">
         <h2>Problems</h2>
-        <p>I had to debug jQuery syntax and test click events, but solved issues with `console.log()` and inspecting the DOM.</p>
+        <p>I had some minor syntax issues and tested my selectors using <code>console.log()</code> and browser inspection tools to debug.</p>
       </div>
 
       <div class="minor-section">
         <h2>Reflection</h2>
-        <p>This lab helped me to understand how JavaScript can dynamically change HTML. It was fun seeing text appear on click!</p>
+        <p>This lab helped me understand how to use jQuery with events and dynamically add elements. It was fun watching the page respond to input and clicks.</p>
       </div>
 
       <div class="minor-section">
         <h2>Results</h2>
-        <!-- Output div for JS-generated content -->
-        <div id="output"></div>
-        <!-- Button for triggering JavaScript -->
         <button id="make-convo">Say Something</button>
+        <div id="output"></div>
+      </div>
+
+      <div class="minor-section">
+        <h2>Bonus Feature</h2>
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button id="send-message">Send Message</button>
       </div>
     </section>
 
     <nav id="links">
-      <!-- Link back to homepage -->
       <p><a href="../index.html">Back to Homepage</a></p>
     </nav>
   </main>
