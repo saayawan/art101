@@ -7,3 +7,13 @@
   border: solid 1px #888;
   background-color: #DDD8C4;
 }
+
+/*dark mode class */
+.dark-mode {
+  background-color: #111 !important;
+  color: #eee !important;
+}
+
+.dark-mode a {
+  color: #0ff !important;
+}
