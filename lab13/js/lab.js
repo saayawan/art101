@@ -8,7 +8,7 @@
 
 // Function to generate FizzBuzzBoom output
 
-
+/*
 function fizzBuzzBoom() {
   let outputStr = "";
 
@@ -35,11 +35,12 @@ function fizzBuzzBoom() {
 $(document).ready(function () {
   fizzBuzzBoom();
 });
+*/
 
 
 
 
-/*// BONUS!!!! Define factors and their output words
+// BONUS!!!! Define factors and their output words
 const FACTOR1 = 3;
 const WORD1 = "Fizz";
 
@@ -78,4 +79,3 @@ $(document).ready(function () {
   fizzBuzz();
 });
 
-*/
