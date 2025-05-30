@@ -2,7 +2,6 @@
 // Author: Saaya Wan
 // Date: 15 May 2025
 
-// Generate a random chunk of text
 function generateRandomText() {
   const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...";
   const min = 3;
@@ -12,7 +11,6 @@ function generateRandomText() {
   return text.slice(randStart, randStart + randLen);
 }
 
-// Shuffle string into an anagram
 function shuffleText(text) {
   const array = text.split("");
   for (let i = array.length - 1; i > 0; i--) {
@@ -22,15 +20,13 @@ function shuffleText(text) {
   return array.join("");
 }
 
-// When the page is loaded
 $(document).ready(function () {
-  // Button: Adds random generated text
+  // Generate text on button click
   $("#make-convo").click(function () {
     const newText = generateRandomText();
     $("#output").append('<div class="text"><p>' + newText + '</p></div>');
   });
 
-  // Bonus 1 & 2: Chat bubbles and shuffling
   let isLeft = true;
 
   function addMessage(text) {
@@ -40,10 +36,15 @@ $(document).ready(function () {
     isLeft = !isLeft;
   }
 
+  // BROKEN VERSION:
+  // $("#snd-message").click(function () {
+
+  // FIXED VERSION:
   $("#send-message").click(function () {
+    console.log("Button clicked"); // Confirm event is triggered
     const userInput = $("#user-input").val().trim();
     if (userInput !== "") {
-      const shuffled = shuffleText(userInput); // Bonus 2
+      const shuffled = shuffleText(userInput);
       addMessage("Anagram: " + shuffled);
       $("#user-input").val(""); // Clear input
     }

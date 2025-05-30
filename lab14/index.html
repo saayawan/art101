@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 14 - Debugging Lab 10</title>
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+  <main id="content">
+    <section>
+      <h1>Lab 14 - Debugging Lab 10</h1>
+    </section>
+
+    <section class="minor-section">
+      <h2>Lab Summary</h2>
+      <p>
+        In this lab, I debugged a broken version of Lab 10, where the main goal was to manipulate the DOM using jQuery. 
+        The bug I introduced was a typo in the button's ID, which caused the JavaScript click handler to fail.
+      </p>
+    </section>
+
+    <section class="minor-section">
+      <h2>What Was Broken</h2>
+      <p>
+        I changed the ID of the button from <code>send-message</code> to <code>snd-message</code> in the HTML file but 
+        forgot to update the corresponding selector in the JavaScript file. As a result, clicking the button had no effect.
+      </p>
+      <pre><code>&lt;!-- Broken HTML --&gt;
+&lt;button id="snd-message"&gt;Send Message&lt;/button&gt;
+
+&lt;!-- Broken JS --&gt;
+$("#send-message").click(function () {
+  // This never runs
+});
+      </code></pre>
+    </section>
+
+    <section class="minor-section">
+      <h2>How I Fixed It</h2>
+      <p>
+        I fixed the issue by correcting the button ID in the HTML to match what the JavaScript expected: <code>send-message</code>.
+      </p>
+      <pre><code>&lt;!-- Fixed HTML --&gt;
+&lt;button id="send-message"&gt;Send Message&lt;/button&gt;
+
+&lt;!-- JavaScript --&gt;
+$("#send-message").click(function () {
+  console.log("Button clicked!");
+});
+      </code></pre>
+    </section>
+
+    <section class="minor-section">
+      <h2>Reflection</h2>
+      <p>
+        This lab helped me understand how even a small typo can break event handling in JavaScript. I also practiced using
+        Chrome DevTools and <code>console.log()</code> to test whether event listeners were firing. 
+        I now double-check that my HTML IDs and JS selectors match exactly.
+      </p>
+    </section>
+
+    <section class="minor-section">
+      <h2>Screenshots</h2>
+      <p>Here is a screenshot showing the console log working after fixing the bug:</p>
+      <img src="img/debug1.png" style="max-width: 100%;">
+      <img src="img/debug2.png" style="max-width: 100%;">
+      <img src="img/debug3.png" style="max-width: 100%;">
+    </section>
+
+    <nav id="links">
+      <p><a href="../index.html">Back to Homepage</a></p>
+    </nav>
+  </main>
+</body>
+</html>

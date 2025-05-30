@@ -26,12 +26,12 @@
 
       <div class="minor-section">
         <h2>Problems</h2>
-        <p>I had some minor syntax issues and tested my selectors using <code>console.log()</code> and browser inspection tools to debug.</p>
+        <p>I simulated a bug where my "Send Message" button wouldn't trigger the message logic. It turned out I had a typo in the button ID.</p>
       </div>
 
       <div class="minor-section">
         <h2>Reflection</h2>
-        <p>This lab helped me understand how to use jQuery with events and dynamically add elements. It was fun watching the page respond to input and clicks.</p>
+        <p>Debugging with Chrome DevTools and console logs helped me fix the issue quickly. I now better understand how event listeners connect to HTML elements.</p>
       </div>
 
       <div class="minor-section">
@@ -42,6 +42,11 @@
 
       <div class="minor-section">
         <h2>Bonus Feature</h2>
+
+        <!-- BROKEN VERSION: had a typo -->
+        <!-- <button id="snd-message">Send Message</button> -->
+
+        <!-- FIXED VERSION: correct ID -->
         <input type="text" id="user-input" placeholder="Type a message..." />
         <button id="send-message">Send Message</button>
       </div>
