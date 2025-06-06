@@ -1,0 +1,16 @@
+.minor-section {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #888;
+  background-color: #DDD8C4;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+#output img {
+  max-width: 300px;
+  display: block;
+  margin-top: 10px;
+}
